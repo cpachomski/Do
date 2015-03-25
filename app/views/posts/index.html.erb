@@ -1,11 +1,36 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Posts</h1>
+<div class='container-fluid'>
 
-<% @posts.each do |post|  %>
-<p>
-  <%= link_to "#{post.title}", post_path(post) %>
-</p>
-<% end %>
+  <div id="index-container" class='row'>
 
-<%= link_to 'New Post', new_post_path %>
+    <div class='col-sm-3'>
+      <div id='sideBar'>
+        <div class='page-header'>
+           <h1>Do</h1>
+        </div>
+        <div id="info">
+            <p>JavaScript & Ruby Musings</p>
+            <p>By Chris Pachomski</p>
+        </div>
+      </div>
+    </div>
+
+    <div class=' col-sm-9'>
+      <div id="postsList">
+        <% @posts.each do |post|  %>
+
+          <div class="blogPost">
+            <div class="postHead"><strong><%= post.title %></strong></div><%= post.created_at.strftime("%B %d, %Y") %> By: Chris Pachomski
+
+              <div class="postBody">
+               <p><%= post.body %></p>
+              </div>
+           </div>
+           <hr>
+
+        <% end %>
+
+    </div>
+
+  </div>
+</div>
