@@ -24,10 +24,18 @@
 .blogPost{
   position:relative;
   width:90%;
-  border: 1px solid;
-  border-color: rgb(90, 28, 28);
 
   margin-top:25px;
   margin-bottom: 50px;
 }
 
+.blogPost h2{
+  font-family: 'Helvetica', cursive;
+  position:relative;
+  width:90%;
+  color: gray;
+}
+
+span{
+  display:inline;
+}

@@ -9,12 +9,14 @@
     <div id="postsList" class=' col-sm-9'>
       <div class='container'>
         <% @posts.each do |post|  %>
+
           <div class="blogPost">
-            <h2><%= post.title %></h2>
+            <p><h2><%= post.title %></h2><%= post.created_at.strftime("%B %d, %Y") %></p>
               <div class="postBody">
                <p><%= post.body %></p>
               </div>
            </div>
+
         <% end %>
       </div>
       </div>
