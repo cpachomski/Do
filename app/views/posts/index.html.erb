@@ -4,20 +4,17 @@
     <div id='sideBar' class=' col-sm-3'>
       <div class='page-header'>
          <h1>Do </h1>
-         <small>for me and you</small>
       </div>
-
     </div>
     <div id="postsList" class=' col-sm-9'>
       <div class='container'>
         <% @posts.each do |post|  %>
-          <section>
-
-              <h2><%= post.title %></h2>
-              <p><%= post.body %></p>
-
-           </section>
-
+          <div class="blogPost">
+            <h2><%= post.title %></h2>
+              <div class="postBody">
+               <p><%= post.body %></p>
+              </div>
+           </div>
         <% end %>
       </div>
       </div>
