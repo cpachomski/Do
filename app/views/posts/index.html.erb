@@ -1,18 +1,27 @@
-<p id="notice"><%= notice %></p>
 
 <div class='container-fluid'>
-  <div class='row'>
-    <div id='sideBar' class='col-md-3'>
-      <h1>Listing Posts</h1>
+  <div id="index-container" class='row'>
+    <div id='sideBar' class=' col-sm-3'>
+      <div class='page-header'>
+         <h1>Do </h1>
+         <small>for me and you</small>
+      </div>
+
     </div>
+    <div id="postsList" class=' col-sm-9'>
+      <div class='container'>
+        <% @posts.each do |post|  %>
+          <section>
 
-      <% @posts.each do |post|  %>
-      <p>
-        <%= link_to "#{post.title}", post_path(post) %>
-      </p>
-      <% end %>
+              <h2><%= post.title %></h2>
+              <p><%= post.body %></p>
 
-    <%= link_to 'New Post', new_post_path %>
+           </section>
 
+        <% end %>
+      </div>
+      </div>
+      <%= link_to 'New Post', new_post_path %>
+    </div>
   </div>
-</div
+</div>
