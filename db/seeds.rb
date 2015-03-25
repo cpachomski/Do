@@ -9,6 +9,6 @@
 
 4.times do
 
-  Post.create(title: Faker::Company.catch_phrase, body: Faker::Lorem.paragraphs(2))
+  Post.create(title: Faker::Company.catch_phrase, body: Faker::Lorem.paragraphs(20,true))
 
 end

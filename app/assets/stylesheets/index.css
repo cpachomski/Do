@@ -22,20 +22,24 @@
 }
 
 .blogPost{
-  position:relative;
+  position: relative;
+  max-height: 500px;
   width:90%;
-
   margin-top:25px;
-  margin-bottom: 50px;
 }
 
 .blogPost h2{
-  font-family: 'Helvetica', cursive;
   position:relative;
-  width:90%;
   color: gray;
 }
 
-span{
-  display:inline;
+.postHead strong{
+  font-size:30px;
+  margin-right:20px;
+}
+
+#postsList{
+  position:relative;
+  overflow-y: scroll;
+  background: white;
 }
