@@ -1,11 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Posts</h1>
+<div class='container-fluid'>
+  <div class='row'>
+    <div id='sideBar' class='col-md-3'>
+      <h1>Listing Posts</h1>
+    </div>
 
-<% @posts.each do |post|  %>
-<p>
-  <%= link_to "#{post.title}", post_path(post) %>
-</p>
-<% end %>
+      <% @posts.each do |post|  %>
+      <p>
+        <%= link_to "#{post.title}", post_path(post) %>
+      </p>
+      <% end %>
 
-<%= link_to 'New Post', new_post_path %>
+    <%= link_to 'New Post', new_post_path %>
+
+  </div>
+</div
