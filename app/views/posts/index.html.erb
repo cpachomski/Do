@@ -10,7 +10,7 @@
 
         </div>
         <div id="info">
-            <p>JavaScript & Ruby Musings</p>
+            <p>Ruby & JavaScript Musings</p>
             <p>By Chris Pachomski</p>
         </div>
       </div>
@@ -24,7 +24,7 @@
             <div class="postHead"><strong><%= post.title %></strong></div><%= post.created_at.strftime("%B %d, %Y") %> By: Chris Pachomski
 
               <div class="postBody">
-               <p><%= post.body %></p>
+               <p><%= simple_format post.body %></p>
               </div>
            </div>
            <hr>
